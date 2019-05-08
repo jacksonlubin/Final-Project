@@ -21,7 +21,7 @@ var svgChange = d3v4.select("#changeGraph").append("svg")
 
 //y position calculation function
 var yChange = d3v4.scaleLinear()
-      .domain([-0.2, 0.2])
+      .domain([-0.3, 0.3])
       .range([heightChange, 0]);
 
 var x0Change = d3v4.scaleBand()  // domain defined below

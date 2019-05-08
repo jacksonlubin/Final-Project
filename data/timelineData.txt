@@ -486,7 +486,6 @@ Brix City Brewing	Little Ferry	New Jersey	2015	40.84	-74.04
 Broadway Brewing Corp	Jamaica	New York	1996	40.66	-73.82
 Broken Bat Brewing Company LLC	Milwaukee	Wisconsin	2015	42.97	-87.9
 Pyramid Breweries Inc.	Seattle	Washington	1984	47.57	-122.34
-Broker Brewing Company, LLC	Creamery	Pennsylvania	2015	None	None
 Brook Broad Brewing LLC	East Windsor	Connecticut	2015	41.9	-72.59
 Brookline Bench Brewing Co., LLC	Cincinnati	Ohio	2017	39.1	-84.58
 Bruce Perry	Woodville	New York	2004	43.8	-76.2
@@ -884,7 +883,6 @@ Miller Brewing Company Employee Fund, Inc.	Milwaukee	Wisconsin	2000	43.04	-87.97
 Miller Brewing International, Inc.	Milwaukee	Wisconsin	1987	43.04	-87.97
 Miller Brewing Overseas, Inc	Milwaukee	Wisconsin	1990	43.04	-87.97
 Associated Microbreweries, Inc.	Costa Mesa	California	1989	33.68	-117.9
-Deschutes Brewery, Inc.	Bend	Oregon	1988	None	None
 Firestone Walker LLC	Penn Valley	California	1996	39.2	-121.2
 Millercoors LLC	Trenton	Ohio	1855	39.49	-84.48
 Night Shift Brewing, Inc.	Chelsea	Massachusetts	2012	42.4	-71.03
@@ -1381,7 +1379,6 @@ Blacksburg Brewing Co	Charlottesville	Virginia	2007	38.0	-78.6
 Blackstone Brewing Company, LLC	Nashville	Tennessee	2009	36.15	-86.9
 Blanca's Tequila Incorporated	Saint Louis	Missouri	2009	38.45	-90.33
 Blind Mouth Brewing Company LLC	Saint Petersburg	Florida	2016	27.74	-82.69
-Blind Squirrel Brewery	Plumtree	North Carolina	2017	None	None
 Blue Blood Brewing Company, Inc.	Lincoln	Nebraska	2011	40.78	-96.7
 Blue Kudzu Sake	Asheville	North Carolina	2013	35.59	-82.56
 Blue Mountain Brewery, Inc.	Afton	Virginia	2006	37.98	-78.79
@@ -1846,7 +1843,6 @@ Preyer Brewing Company, LLC	Greensboro	North Carolina	2014	36.07	-79.77
 Prjs, LLC	Baltimore	Maryland	2007	39.28	-76.53
 Pro RE Nata Brewing Company, LLC	Crozet	Virginia	2015	38.2	-78.7
 Proof Artisan Distillers, LLC	Fargo	North Dakota	2013	46.93	-96.83
-Prospector Brewing Services	Dunedin	Florida	2001	None	None
 Prost	Round Top	Texas	2015	30.0	-96.7
 Psa Brewery, LLC	Baltimore	Maryland	2015	39.32	-76.57
 Puritan Brew Co	Fayetteville	Arkansas	2014	36.0	-94.1
@@ -1922,7 +1918,6 @@ Southern Appalachian Brewery	Hendersonville	North Carolina	2012	35.3	-82.5
 Southern Crown Partners, LLC	Fitzgerald	Georgia	2007	31.7	-83.2
 Southern Glazer's Wine and Spirits of Texas, LLC	Farmers Branch	Texas	1909	32.92	-96.9
 Anheuser-Busch, LLC	Fort Collins	Colorado	1852	40.7	-105.0
-Southern Heights Brewing Co LLC	Austin	Texas	2014	None	None
 Southern Heights Brewing Co LLC	Round Rock	Texas	2014	30.54	-97.65
 Southern Pines Brewing Company, LLC	Southern Pines	North Carolina	2013	35.17	-79.38
 Southern Prohibition Brewing	Hattiesburg	Mississippi	2015	31.3	-89.4
@@ -2074,7 +2069,6 @@ Yuengling Brewing Co Tampa Inc	Tampa	Florida	1998	28.05	-82.45
 Zilch, Inc.	The Woodlands	Texas	2004	30.2	-95.54
 Zodiac Spirits Inc	Dallas	Texas	2003	32.83	-96.77
 Zymurgy Holding Company, Lc	Del Valle	Texas	2014	30.15	-97.58
-10 Barrel Brewing, LLC	Bend	Oregon	2006	None	None
 14 Cannons Brewing Company, Inc.	Westlake Village	California	2017	34.2	-118.82
 15 Mile Ventures, LLC	The Dalles	Oregon	2015	45.6	-121.2
 1848 Distillery	Placerville	California	2015	38.8	-120.6
@@ -2105,7 +2099,6 @@ Altered Aleworks LLC	Sacramento	California	2015	38.54	-121.45
 Amakua Holdings Inc	Lahaina	Hawaii	1994	20.9	-156.6
 Ambitious Ales LLC	Buena Park	California	2014	33.88	-117.99
 Ambrew LLC	Edmonds	Washington	2010	47.81	-122.37
-American Brewing Co Ltd	Honolulu	Hawaii	2005	None	None
 Amnesia Brewing ""llc	Portland	Oregon	2003	45.54	-122.68
 Ancestry Brewing	Oregon City	Oregon	2016	45.3	-122.5
 Anchor Brewers & Distillers, LLC	Novato	California	2010	38.1	-122.64
@@ -2170,7 +2163,6 @@ Blossom Rock Brewing Company	Oakland	California	2016	37.76	-122.16
 Blue Horse Brewing Company LLC	Stockton	California	2018	38.03	-121.42
 Blue Note Brewing Company	Woodland	California	2013	38.8	-121.9
 Boat Beer Brewing LLC	Bellevue	Washington	2016	47.61	-122.11
-Boneyard Beer LLC	Bend	Oregon	2009	None	None
 Bootlegger's Brewery LLC	Fullerton	California	2006	33.88	-117.89
 Boundary Bay Brewing Company	Bellingham	Washington	1992	48.74	-122.53
 Boyle Heights Brewery	Los Angeles	California	2018	34.13	-118.21
@@ -2187,7 +2179,6 @@ Brew Ventures Incorporated	Clayton	California	2016	37.89	-121.89
 Brew Wings LLC	Paramount	California	2015	33.9	-118.17
 Brew4u, LLC	San Carlos	California	2013	37.5	-122.27
 Brewbakers Brewing Company	Visalia	California	1995	36.4	-119.38
-Brewer Brothers AG Services	Fresno	California	2016	None	None
 Brewery	Portland	Oregon	2014	45.48	-122.64
 Brewery Atlantis, Inc.	San Francisco	California	1996	37.77	-122.39
 Brewhouse Provisions	Redmond	Washington	2015	47.68	-122.12
@@ -2337,7 +2328,6 @@ Ghost Runners Brewery	Vancouver	Washington	2012	45.64	-122.63
 Gig Harbor Brewing Co.	Tacoma	Washington	2018	47.21	-122.47
 Glacier Design Systems, Inc.	Huntington Beach	California	2000	33.72	-118.05
 Gold Coast Draft Inc	Moorpark	California	2003	34.3	-118.8
-Golden State Brewing Company	Eugene	Oregon	2008	None	None
 Good Meadow Distillery, LLC	Roseburg	Oregon	2015	43.2	-123.5
 Grains of Wrath Brewery	Camas	Washington	2016	45.7	-122.4
 Gramic Enterprises, Inc.	Yorba Linda	California	2005	33.9	-117.73
@@ -2569,7 +2559,6 @@ Running Man Distributing, LLC	Portland	Oregon	2014	45.59	-122.71
 Russian River Brewing Company, Inc.	Geyserville	California	2015	38.7	-123.1
 Rusty Bucket Brewing	Medford	Oregon	2016	42.3	-122.9
 Ruth McGowans Brew Pub	Cloverdale	California	2002	38.8	-123.0
-Sacrilege Brewing Project, LLC	El Granada	California	2015	None	None
 Sake Beverage Company Inc	Calabasas	California	1999	34.13	-118.67
 Saktea	El Cajon	California	2011	32.79	-116.97
 Saladin Corporation	Tualatin	Oregon	2012	45.37	-122.76
@@ -2612,7 +2601,6 @@ Solid Ground Brewing	Placerville	California	2016	38.8	-120.6
 Solorio Brewing Company LLC	Rancho Cucamonga	California	2015	34.1	-117.58
 Sonoma Springs Brewing Company LLC	Sonoma	California	2006	38.2	-122.5
 South Bay Beverage Inc	San Jose	California	2011	37.34	-121.88
-South Coast Brewing Company	Eugene	Oregon	2001	None	None
 Southern Oregon Brewing Co	Medford	Oregon	2007	42.3	-122.8
 Southern Pacific Brewing, LLC	San Francisco	California	2010	37.75	-122.42
 Spanky Burger & Brew	Tacoma	Washington	2016	47.25	-122.47

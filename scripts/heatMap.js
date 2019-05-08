@@ -51,11 +51,11 @@ function ready(error, data, us) {
 		.domain([0, 0.1, 1, 100, 1e3, 1e4, 1e5, 1e6, 6e6])
 		.range(legendColorsHeatMap);
 
-	var projection = d3.geo.albersUsa()
+	var projectionHeatMap = d3.geo.albersUsa()
 		.translate([widthHeat / 2, heightHeat / 2]);
 
 	var path = d3.geo.path()
-		.projection(projection);
+		.projection(projectionHeatMap);
 
 	var countyShapes = svgHeat.selectAll(".county")
 		.data(counties.features)
@@ -72,7 +72,7 @@ function ready(error, data, us) {
 	
 
 	function zoomed() {
-		projection
+		projectionHeatMap
 			.translate(zoom.translate())
 		 	.scale(zoom.scale());
 
@@ -137,7 +137,8 @@ function ready(error, data, us) {
 		slider.property("value", year);
 		d3.select(".year").text(year);
 		countyShapes.style("fill", function(d) {
-			return color(d.properties.years[year][0].rate)
+			try{ return color(d.properties.years[year][0].rate);}
+			catch (TypeError) {}
 		});
 	}
 

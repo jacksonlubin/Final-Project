@@ -1,25 +1,51 @@
 var marginTimeline = {top: 10, right: 20, bottom: 20, left: 20};
     widthTimeline = 960 - marginTimeline.left - marginTimeline.right,
-    heightTimeline = 600 - marginTimeline.top - marginTimeline.bottom;
+    heightTimeline = 600 - marginTimeline.top - marginTimeline.bottom,
+    scale0Timeline = widthTimeline;
 
 var mapPath = "./data/us.json";
 
-var projection = d3.geo.albersUsa()
+var projectionTimeline = d3.geo.albersUsa()
     .scale(1000)
     .translate([widthTimeline / 2, heightTimeline / 2]);
 
 var path = d3.geo.path()
-    .projection(projection);
+    .projection(projectionTimeline);
 
 var svgTimeline = d3.select("#mapTimeline").append("svg")
     .attr("width", widthTimeline)
-    .attr("height", heightTimeline);
+    .attr("height", heightTimeline)
+    .append("g")
+      .attr("transform", "translate(" + marginTimeline.left + "," + marginTimeline.top + ")");
 
 var yearText = d3.select("#yearText").text("1829");
-var yearTextData = d3.select("#yearTextData").text("");
+var yearTextData = d3.select("#yearTextData").text(" ");
 
-d3.json(mapPath, function(error, us) {
+queue()
+  .defer(d3.json, "./data/us.json")
+  .await(ready);
+
+function ready(error, us) {
+
+// d3.json(mapPath, function(error, us) {
   if (error) return console.error(error);
+
+  // var zoomTimeline = d3.behavior.zoom()
+  //   .translate([widthTimeline / 2, heightTimeline / 2])
+  //   .scale(scale0Timeline)
+  //   .scaleExtent([scale0Timeline, 8 * scale0Timeline])
+  //   .on("zoom", zoomed());
+
+
+  // function zoomed() {
+  //   console.log('zoom')
+  //   projectionTimeline
+  //     .translate(zoomTimeline.translate())
+  //     .scale(zoomTimeline.scale());
+
+  //   svgTimeline.selectAll()
+  //     .attr("d", path);
+  // }
 
   svgTimeline.append("path")
       .datum(topojson.feature(us, us.objects.land))
@@ -36,6 +62,9 @@ d3.json(mapPath, function(error, us) {
       .attr("d", path)
       .attr("class", "state-boundary");
 
+  // svgTimeline
+  //   .call(zoom)
+  //   .call(zoom.event);
 
   d3.tsv("./data/timelineData.txt")
     .row(function(d) {
@@ -52,24 +81,7 @@ d3.json(mapPath, function(error, us) {
 
       window.site_data = rows;
     });
-});
-
-// var zoom = d3.behavior.zoom()
-//   .translate([widthTimeline / 2, heightTimeline / 2])
-//   .scale(scale0)
-//   .scaleExtent([scale0, 8 * scale0])
-//   .on("zoom", zoomed);
-
-
-// function zoomed() {
-//   projection
-//     .translate(zoom.translate())
-//     .scale(zoom.scale());
-
-//   svgTimeline.selectAll("path")
-//     .attr("d", path);
-// }
-
+// };
 
 var oldsites = function(data) {
   var sites = svgTimeline.selectAll(".site")
@@ -80,10 +92,10 @@ var oldsites = function(data) {
   sites.enter().append("circle")
       .attr("class", "site")
       .attr("cx", function(d) {
-        return projection([d.lng, d.lat])[0];
+        return projectionTimeline([d.lng, d.lat])[0];
       })
       .attr("cy", function(d) {
-        return projection([d.lng, d.lat])[1];
+        return projectionTimeline([d.lng, d.lat])[1];
       })
       .attr("r", 2);
 
@@ -122,10 +134,10 @@ var newsites = function(data) {
   sites.enter().append("circle")
       .attr("class", "site")
       .attr("cx", function(d) {
-        return projection([d.lng, d.lat])[0];
+        return projectionTimeline([d.lng, d.lat])[0];
       })
       .attr("cy", function(d) {
-        return projection([d.lng, d.lat])[1];
+        return projectionTimeline([d.lng, d.lat])[1];
       })
       .attr("r", 1)
       .transition().duration(400)
@@ -155,6 +167,7 @@ var newsites = function(data) {
   //     .remove();
 };
 
+
 d3.select('#slider3').call(d3.slider()
   .axis(true).min(1829).max(2019).step(1)
   .on("slide", function(evt, value) {
@@ -171,3 +184,5 @@ d3.select('#slider3').call(d3.slider()
     oldsites(newData);
   })
 );
+
+};
