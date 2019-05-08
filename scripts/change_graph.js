@@ -17,11 +17,11 @@ var marginChange = {top: 20, right: 200, bottom: 80, left: 50},
 var svgChange = d3v4.select("#changeGraph").append("svg")
     .attr("width", widthChange + marginChange.left + marginChange.right)
     .attr("height", heightChange + marginChange.top + marginChange.bottom);
-    g = svgChange.append("g").attr("transform", "translate(" + marginChange.left + "," + marginChange.top + ")");
+    gChange = svgChange.append("g").attr("transform", "translate(" + marginChange.left + "," + marginChange.top + ")");
 
 //y position calculation function
 var yChange = d3v4.scaleLinear()
-      .domain([-0.2, 3])
+      .domain([-0.2, 0.2])
       .range([heightChange, 0]);
 
 var x0Change = d3v4.scaleBand()  // domain defined below
@@ -65,7 +65,7 @@ d3v4.tsv("./data/changeData.tsv", function(error, data) {
   x1Change.domain(subCategories).rangeRound([0, x0Change.bandwidth()])
 
   // Add bar chart
-    var selection = g.selectAll("g")
+    var selection = gChange.selectAll("g")
       .data(data)
       .enter().append("g")
         .attr("transform", d => "translate(" + x0Change(d.year) + ",0)" )
@@ -83,7 +83,7 @@ d3v4.tsv("./data/changeData.tsv", function(error, data) {
         .style("visibility", "visible")})
       .on("mousemove", function(d){ tooltipChange
         .style("top", (d3v4.event.pageY-10)+"px").style("left",(d3v4.event.pageX+10)+"px")
-        .text(tooltipFormatChange(d.value)+' change for breweries producing '+d.key+' of beer per year')})
+        .text(tooltipFormatChange(d.value)+' change')})
      .on("mouseout", function(){ tooltipChange.style("visibility", "hidden")});
       //can not nest the text element inside the rect element !
       // selection.selectAll("text")
@@ -98,7 +98,7 @@ d3v4.tsv("./data/changeData.tsv", function(error, data) {
       //     .text(d => Number.parseFloat(d.value).toFixed(1))
 
   //add the x-axis
-  g.append("g")
+  gChange.append("g")
       .attr("class", "axisChange")
       .attr("transform", "translate(0," + (heightChange) + ")")
       .call(d3v4.axisBottom(x0Change))
@@ -107,18 +107,18 @@ d3v4.tsv("./data/changeData.tsv", function(error, data) {
       .call(wrap, x0Change.bandwidth());
 
   //add the y-axis - notice it does not have css class 'axis'
-  g.append('g')
+  gChange.append('g')
   .call(yAxisChange)
 
   //idenitfy zero line on the y axis.
-  g.append("line")
+  gChange.append("line")
       .attr("y1", yChange(0))
       .attr("y2", yChange(0))
       .attr("x1", 0)
       .attr("x2", widthChange)
       .attr("stroke", "black");
 
-var legend = g.append("g")
+var legend = gChange.append("g")
       .attr("font-family", "sans-serif")
       .attr("font-size", 13)
       .attr("text-anchor", "start")

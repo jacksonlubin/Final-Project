@@ -71,6 +71,14 @@ h3 {
   color: #000;
 }
 
+table, th, td {
+  margin: 10px 10px 0px 0px;
+  line-height: 1.75em;
+  font-size: 1em;
+  font-weight: 600;
+  color: #000;
+}
+
 h2.year {
   margin: 0px 0px 0px 0px;
   font-size: 1.3em;
@@ -222,56 +230,37 @@ path {
     <h1><font size="5">Bret Stepanek and Jackson Lubin</font></h1>
   </center>
   <p>
-    We would like to introduce you to a data-based analysis of the craft beer explosion revolutionizing the American beer market. We will define craft beer as Based on US Census data, the number of people emplyed in a brewery in America has doubled between 2007 and 2016 (the most recently published year), which is far higher growth than the rest of the economy. 
+    We would like to introduce you to a data-based analysis of the craft beer explosion revolutionizing the American beer market. We will define craft beer as Based on US Census data, the number of people emplyed in a brewery in America has doubled between 2007 and 2016 (the most recently published year), which is far higher growth than the rest of the economy.
+
   </p>
   <center>
-  <p>
+
+  <p></p>
+  <table>
+    <tr>
+      <th align="right">31 Gallons</th> <th>=</th> <th align="left">1 Barrel</th>
+    </tr>
+    <tr>
+      <th align="right">1 Barrel</th> <th>=</th> <th align="left">330 Beers</th>
+    </tr>
+    <tr>
+      <th align="right">1 Beer</th> <th>=</th> <th align="left">12 fl. oz.</th>
+    </tr>
+</table>
+<!--   <p>
     31 Gallons &nbsp; = &nbsp;   1 Barrel 
   </p><p>
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 Barrel  &nbsp; = &nbsp;   330 Beers  
   </p><p>
      &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; 1 Beer &nbsp;  = &nbsp;   12 fl. oz.
 
-  </p>
+  </p> -->
   </center>
-  <p></p>
-<center>
-  	<h1>Craft Brewery Production by County from 2008 to 2017</h1>
-    <h2>(Major nationwide breweries not included)</h2>
-  </center>
-  	<h2 class="year"></h2>
-  	<div class="slider"></div>
-    <div id="slider"></div>
-    <!-- <button id="play-button">Play</button> -->
-    <center>
-  	<div id="heatMap"></div>
-  </center>
-
-<script src="./scripts/heatMap.js"></script>
-
-  <p>
-    More text
-  </p>
-
-  <center>
-    <h1>Breweries Started per Year</h1>
-    <div id="slider3"></div>
-    <!-- <h2 id="yearText"></h2> -->
-    <h3 id="yearTextData"></h3>
-    <div id="mapTimeline"></div>
-  </center>
-
-<script src="./scripts/mapTimeline.js"></script>
-
-  <p>
-    More text
-  </p>
 
   <center>
     <h1>Number of Breweries</h1>
     <div id="numberStacked"></div>
   </center>
-
   <script src="./scripts/number_stacked_bar.js"></script>
 
   <p>
@@ -282,23 +271,65 @@ path {
     <h1>Beer Production by Size of Brewery</h1>
     <div id="productionStacked"></div>
   </center>
-
   <script src="./scripts/production_stacked_bar.js"></script>
+  
+  <p>
+    More text
+  </p>
+
+  <center>
+    <h1>Percent Change From 2007 in Beer Production by Size of Brewery</h1>
+    <div id="changeGraph"></div>
+  </center>
+  <script src="./scripts/change_graph.js"></script>
+ 
+  <p>
+    More text
+  </p>
+
+  <center>
+      <h1>Breweries Started per Year</h1>
+      <div id="slider3"></div>
+      <!-- <h2 id="yearText"></h2> -->
+      <h3 id="yearTextData"></h3>
+      <div id="mapTimeline"></div>
+    </center>
+  <script src="./scripts/mapTimeline.js"></script>
 
   <p>
     More text
   </p>
 
   <center>
-    <h1>Percent Change From 2008 in Beer Production by Size of Brewery</h1>
-    <div id="changeGraph"></div>
-  </center>
-
-  <script src="./scripts/change_graph.js"></script>
+    	<h1>Craft Brewery Production by County from 2008 to 2017</h1>
+      <h2>(Major nationwide breweries not included)</h2>
+    </center>
+    	<h2 class="year"></h2>
+    	<div class="slider"></div>
+      <div id="slider"></div>
+      <!-- <button id="play-button">Play</button> -->
+      <center>
+    	<div id="heatMap"></div>
+    </center>
+  <script src="./scripts/heatMap.js"></script>
 
   <p>
     More text
   </p>
+
+  <center><h1>Appendix</h1></center>
+
+  <center>
+    <h1>Total Beer Industry Employment</h1>
+    <div id="employmentStacked"></div>
+  </center>
+  <script src="./scripts/employment_stacked.js"></script>
+
+ <center>
+    <h1>Average Salary of Breweries</h1>
+    <div id="salaryGraph"></div>
+  </center>
+  <script src="./scripts/average_salary.js"></script>
 
   <center><h1>Sources</h1></center>
 
