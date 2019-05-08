@@ -120,7 +120,7 @@ var legend = gSalary.append("g")
     .enter().append("g")
       .attr("transform", function(d, i) { return "translate(100," + i * 20 + ")"; });
   legend.append("rect")
-      .attr("x", widthSalary - 100)
+      .attr("x", widthSalary - 105)
       .attr("width", 18)
       .attr("height", 18)
       .attr("fill", function(d,i){return legendColorsSalary[i]});
