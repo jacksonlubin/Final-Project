@@ -1,5 +1,3 @@
-
-// var parseDate = d3.time.format("%Y").parse;
 var tooltipFormatProduction = d3.format(".2s");
 
 var marginProduction = {top: 20, right: 300, bottom: 30, left: 20},
@@ -23,9 +21,11 @@ var yAxisProduction = d3.svg.axis()
 
 // var legendColorsProduction = ["#ffeecc","#ffe6b3", "#ffcc66", "#ffb31a", "#e69900", "#b37700", "#805500", "#664400", "#332200"];
 // var legendColorsProduction = ["#664400","#cc8800","#ffb31a","#ffc34d"]
-var legendColorsProduction = ["#332200","#664400","#996600","#cc8800","#ffaa00","#ffbb33","#ffcc66","#ffd480","#ffdd99","#ffeecc"];
+// var legendColorsProduction = ["#332200","#664400","#996600","#cc8800","#ffaa00","#ffbb33","#ffcc66","#ffd480","#ffdd99","#ffeecc"];
+var legendColorsProduction = ["#332200","#996600","#ffaa00","#ffd480",];
 // var legendColorsProduction = ["#4d3300", "#996600", "#e69900", "#ffcc66"];
-var colsProduction = ["6M+ Barrels", "1M to 6M Barrels", "500,001 to 1M Barrels", "100,000 to 500,000 Barrels", "60,001 to 100,000 Barrels",  "30,001 to 60,000 Barrels", "15,001 to 30,000 Barrels", "7,501 to 15,000 Barrels", "1,001 to 7,500 Barrels", "1 to 1,000 Barrels"]
+// var colsProduction = ["6M+ Barrels", "1M to 6M Barrels", "500,001 to 1M Barrels", "100,000 to 500,000 Barrels", "60,001 to 100,000 Barrels",  "30,001 to 60,000 Barrels", "15,001 to 30,000 Barrels", "7,501 to 15,000 Barrels", "1,001 to 7,500 Barrels", "1 to 1,000 Barrels"]
+var colsProduction = ["1M+ Barrels", "100,001 to 1M Barrels", "30,001 to 100,000 Barrels", "1 to 30,000 Barrels"]
 // var colsProduction = ["15,001+ Barrels", "7,501 to 15,000 Barrels", "1,001 to 7,500 Barrels", "1 to 1,000 Barrels"]
 var legendTextProduction = []
   for (var i=0; i<colsProduction.length; i++){
@@ -38,11 +38,11 @@ var svgProduction = d3.select("#productionStacked").append("svg")
   .append("g")
     .attr("transform", "translate(" + marginProduction.left + "," + marginProduction.top + ")");
 
-d3.tsv("./data/Production.tsv", type, function(error, production) {
+d3.tsv("./data/Production_cleaned.tsv", type, function(error, production) {
   if (error) throw error;
   var layersProduction = d3.layout.stack()(colsProduction.map(function(c) {
     return production.map(function(d) {
-      return {x: d.date, y: d[c]};
+      return {x: d.year, y: d[c]};
     });
   }));
 
@@ -102,7 +102,7 @@ d3.tsv("./data/Production.tsv", type, function(error, production) {
 });
 
 function type(d) {
-  d.date = d.date;
+  d.year = d.year;
   colsProduction.forEach(function(c) {d[c] = +d[c]; });
   return d;
 }
