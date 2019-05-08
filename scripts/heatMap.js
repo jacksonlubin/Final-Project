@@ -3,7 +3,7 @@ var margin = {top: 20, right: 20, bottom: 20, left: 20};
 	heightHeat = 600 - margin.top - margin.bottom,
 	scale0 = widthHeat,
 	barrelsFormat = d3.format(",.2r"),
-	percentFormat = d3.format("1%");
+	percentFormat = d3.format(".1%");
 
 var playButton = d3.select("#play-button");
 var moving = false;
@@ -89,7 +89,8 @@ function ready(error, data, us) {
 			"<p><strong>" + d.properties.years[2008][0].county + ", " + d.properties.years[2008][0].state + "</strong></p>" +
 			"<table><tbody><tr><td class='wide'>2008 Production:</td><td>" + barrelsFormat((d.properties.years[2008][0].rate)) + "</td></tr>" +
 			"<tr><td>2017 Production:</td><td>" + barrelsFormat((d.properties.years[2017][0].rate)) + "</td></tr>" +
-			"<tr><td>Change:</td><td>" + percentFormat(((d.properties.years[2017][0].rate-d.properties.years[2008][0].rate))/d.properties.years[2008][0].rate) + "</td></tr></tbody></table>"
+			"<tr><td>Total Change:</td><td>" + percentFormat(((d.properties.years[2017][0].rate-d.properties.years[2008][0].rate))/d.properties.years[2008][0].rate)+ "</td></tr>" +
+			"<tr><td>Compound Annual Growth Rate:</td><td>" + percentFormat(Math.pow(d.properties.years[2017][0].rate/d.properties.years[2008][0].rate,1/9)-1) + "</td></tr></tbody></table>"
 			)
 			.style("left", (d3.event.pageX + 15) + "px")
 			.style("top", (d3.event.pageY - 28) + "px");
