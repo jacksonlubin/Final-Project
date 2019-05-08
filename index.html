@@ -48,9 +48,25 @@ body, h1, h3, p {
   padding: 0px;
 }*/
 
-h1, h2 {
+h1 {
   line-height: 1em;
   font-size: 1.75em;
+  font-weight: 900;
+  color: #000;
+}
+
+h2 {
+  margin: 0px 0px 0px 0px;
+  line-height: 0.75em;
+  font-size: 1.2em;
+  font-weight: 900;
+  color: #000;
+}
+
+h3 {
+  margin: 50px 0px 0px 0px;
+  line-height: 0.75em;
+  font-size: 1.2em;
   font-weight: 900;
   color: #000;
 }
@@ -209,7 +225,8 @@ path {
     Add some text here
   </p>
 <center>
-  	<h1>Brewery Production by County from 2008 to 2017</h1>
+  	<h1>Craft Brewery Production by County from 2008 to 2017</h1>
+    <h2>(Major nationwide breweries not included)</h2>
   </center>
   	<h2 class="year"></h2>
   	<div class="slider"></div>
@@ -228,8 +245,8 @@ path {
   <center>
     <h1>Breweries Started per Year</h1>
     <div id="slider3"></div>
-    <h2 id="yearText"></h2>
-    <h1 id="yearTextData"><font size="2"></font></h1>
+    <!-- <h2 id="yearText"></h2> -->
+    <h3 id="yearTextData"></h3>
     <div id="mapTimeline"></div>
   </center>
 
