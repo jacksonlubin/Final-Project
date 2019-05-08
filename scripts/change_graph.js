@@ -21,7 +21,7 @@ var svgChange = d3v4.select("#changeGraph").append("svg")
 
 //y position calculation function
 var yChange = d3v4.scaleLinear()
-      .domain([-1, 1])
+      .domain([-0.2, 3])
       .range([heightChange, 0]);
 
 var x0Change = d3v4.scaleBand()  // domain defined below
@@ -33,9 +33,9 @@ var x1Change = d3v4.scaleBand()  // domain and range defined below
     .paddingOuter(0.25)
     .paddingInner(0.15);
 
-//blue, tan, red colors
+//colors
 var zChange = d3v4.scaleOrdinal()
-        .range(["#332200","#664400","#996600","#cc8800","#ffaa00","#ffbb33","#ffcc66","#ffd480","#ffdd99","#ffeecc"]);
+        .range(legendColorsProduction);
 var legendColorsChange = zChange.range().reverse()
 //reference to the y axis
 //axisLeft put labels on left side
@@ -44,20 +44,13 @@ const yAxisChange = d3v4.axisLeft(yChange).ticks(7,".0%");
 
 d3v4.tsv("./data/changeData.tsv", function(error, data) {
   if (error) throw error;
-
   // format the data
   data.forEach(function(d) {
     d.year = +d.year;
-    d["6M+ Barrels"] = +d["6M+ Barrels"];
-    d["1M to 6M Barrels"] = +d["1M to 6M Barrels"];
-    d["500,001 to 1M Barrels"] = +d["500,001 to 1M Barrels"];
-    d["100,000 to 500,000 Barrels"] = +d["100,000 to 500,000 Barrels"];
-    d["60,001 to 100,000 Barrels"] = +d["60,001 to 100,000 Barrels"];
-    d["30,001 to 60,000 Barrels"] = +d["30,001 to 60,000 Barrels"];
-    d["15,001 to 30,000 Barrels"] = +d["15,001 to 30,000 Barrels"];
-    d["7,501 to 15,000 Barrels"] = +d["7,501 to 15,000 Barrels"];
-    d["1,001 to 7,500 Barrels"] = +d["1,001 to 7,500 Barrels"];
-    d["1 to 1,000 Barrels"] = +d["1 to 1,000 Barrels"];
+    d["1M+ Barrels"] = +d["1M+ Barrels"];
+    d["100,001 to 1M Barrels"] = +d["100,001 to 1M Barrels"];
+    d["30,001 to 100,000 Barrels"] = +d["30,001 to 100,000 Barrels"];
+    d["1 to 30,000 Barrels"] = +d["1 to 30,000 Barrels"];
   });
 
   //examine first object, retrieve the keys, and discard the first key
@@ -107,7 +100,7 @@ d3v4.tsv("./data/changeData.tsv", function(error, data) {
   //add the x-axis
   g.append("g")
       .attr("class", "axisChange")
-      .attr("transform", "translate(0," + (heightChange-100) + ")")
+      .attr("transform", "translate(0," + (heightChange) + ")")
       .call(d3v4.axisBottom(x0Change))
       .selectAll(".tick text")
       //use wrap function to wrap long lines in labels
