@@ -76,7 +76,7 @@ h4 {
 }
 
 h6 {
-  margin: 0px 0px 0px 0px;
+  margin: 10px 350px 0px 120px;
   line-height: 1em;
   font-size: 1em;
   font-style: italic;
@@ -255,9 +255,11 @@ path {
 		We would like to introduce you to a data-based analysis of the craft beer explosion revolutionizing the American beer market. We are interested in the craft beer market dynamics because of extreme migration of sales from large market leaders to local microbreweries. We define craft breweries as any brewery that produces less than six million barrels of beer each year, which is enough for 6,000 bars’ worth per year.
 	</p>
   <br>
+  <center>
   <h4>
       Our Process
   </h4>
+</center>
   <p>
     Starting with about two dozen individual data sources, we amassed and synthesized the datasets together to make our visualizations easier to understand. 
   </p>
@@ -282,54 +284,84 @@ path {
 
   <p> 
   </p>
-
+  <br>
+  <br>
   <center>
     <h3>Beer Production by Size of Brewery</h3>
+    <br>
     <div id="productionStacked"></div>
-    <h6>Breweries are grouped by size (determined by how many barrels per year they produce).</h6>
+    <h6>Breweries are grouped by size (determined by how many barrels per year they produce). Each brewery in this smallest category is producing less than 1,000 barrels per year, or roughly the amount an average bar in a major city will buy in one year. </h6>
   </center>
   <script src="./scripts/production_stacked_bar.js"></script>
-
-  <center>
-    <h1>Number of Breweries</h1>
-    <div id="numberStacked"></div>
-  </center>
-  <script src="./scripts/number_stacked_bar.js"></script>
-
+  <br>
   <p>
-    More text
-  </p>
+    One might suspect that beer production overall has exploded wildly, but that is not the case. The U.S. yearly beer sales over the last decade has decreased by 0.66% every year; however, the amount of beer sold from microbreweries (producing less than 30,000 barrels/year) has increased by 10.5% per year in the same timeframe. Microbreweries are bucking market trends and outmaneuvering the big breweries. They are producing larger and larger volumes each year because of an explosion in the number of breweries in America in the last ten years. 
 
-  
-  <p>
-    More text
   </p>
-
+  <br>
+  <br>
   <center>
-    <h1>Yearly Percent Change in Production by Size of Brewery</h1>
+    <h3>Yearly Percent Change in Production by Size of Brewery</h3>
+    <br>
     <div id="changeGraph"></div>
   </center>
   <script src="./scripts/change_graph.js"></script>
- 
+  
   <p>
-    More text
+    This is a close-up of the previous graph. Note that the smallest breweries have had consistent and high growth for a decade, while the larger the brewery, the worse it has been doing in the past few years.
   </p>
-
+  <br>
+  <br>
   <center>
-      <h1>Breweries Started per Year</h1>
+    <h3>Number of Breweries</h3>
+    <div id="numberStacked"></div>
+  </center>
+  <script src="./scripts/number_stacked_bar.js"></script>
+  <br>
+  <p>
+    The number of breweries in America has almost <b> quadrupled in the last ten years.</b> The most growth is in the number of the smallest breweries that are just starting up.
+  </p>
+  <br>
+ 
+  <h4>
+  Why is this trend happening? There are two main causes: <br> <br> </h4>
+  <h4>
+  1. Consumer choice trends </h4> 
+
+  <p>
+  Adults in America today generally believe that the biggest, national breweries do not have high quality finished products, and so they want beer from local breweries. According to a poll by the Brewer’s Association, an industry group for craft and independent breweries, 67% of beer drinkers said that it was important to them that the beer they drank came from a local brewery [1]. In general, the closer to home the brewery is, the more local residents want to drink from it. 
+  </p> 
+  <br>
+  <h4>
+  2. Brewery friendly government policies
+  </h4>
+  <p>
+  <b>The second reason for a craft brewery explosion in recent years: government policies friendly to small breweries. </b> <br>At the end of the Prohibition Era in 1933, the federal government heavily restricted the beer industry. With a <b>“Three-Tier System,” </b>they required that brewers could not distribute the beer themselves and then the distributors had to use retailers to sell the final product to consumers [2]. This was aimed to decrease vertical monopolies and cause deliberate inefficiencies in the market to help competition, and it worked. This system means that the breweries themselves often do not know where their beer is even being sold because distributors buy the beer outright from the breweries and sell to retailers in closely guarded trade routes. This was a limitation to our data collection and meant that our only information on individual breweries came from the Cambridge Brewing Company, where the only details the owner knew himself was that his beer was sold in Massachusetts and Rhode Island. 
+  </p><p>
+  The flip side to our lack of individual brewery data is that this system means that small startup microbreweries are allowed to sell to the same stores and in the same market as their much larger rivals, allowing easy access to a massive market. 
+  </p>
+  <br>
+  <br>
+  <center>
+      <h3>Breweries Started per Year</h3>
+      <br>
       <div id="slider3"></div>
       <!-- <h2 id="yearText"></h2> -->
       <h3 id="yearTextData"></h3>
       <div id="mapTimeline"></div>
     </center>
   <script src="./scripts/mapTimeline.js"></script>
+  <h4>
+So why didn’t more breweries start in 1933? 
+  </h4><p>
+    In 1978, congress passed a bill that legalized brewing beer at home without taxation, which caused the 1980’s to see a mini-explosion of craft beer similar to what we’re seeing today [3]. In 1984 we see the first year of double digit breweries opening up, which continues to today. Today we might have heard of Sierra Nevada, Sam Adams, or the mch smaller Cambridge Brewing Company, all of which were founded in the 1980’s during this first microbrewery surge. 
+</p><p>
+<b>How about the surge in the last ten years? </b> <br> Another government policy can help explain the recent surge. This jump in the number of startup breweries this decade can be partially explained by state-by-state exceptions to the Three-Tier System that allows breweries under a certain size to produce and sell their beer on premises in a taproom and completely sidestep the distributors and retailers.
 
-  <p>
-    More text
   </p>
 
 <center>
-    <h1>Craft Brewery Production by County from 2008 to 2017</h1>
+    <h3>Craft Brewery Production by County from 2008 to 2017</h3>
     <h2>(Major nationwide breweries not included)</h2>
 </center>
 
@@ -341,20 +373,22 @@ path {
     <div id="heatMap"></div>
   </center>
   <script src="./scripts/heatMap.js"></script>
-
+<h6>
+  Cook county had 825 people employed in the beer industry in 2017 in 28 different breweries, a county where there were 4 before 2008. 
+</h6>
   <p>
     text
   </p>
   <center><h1>Appendix</h1></center>
 
   <center>
-    <h1>Total Beer Industry Employment</h1>
+    <h3>Total Beer Industry Employment</h3>
     <div id="employmentStacked"></div>
   </center>
   <script src="./scripts/employment_stacked.js"></script>
 
  <center>
-    <h1>Average Salary of Breweries</h1>
+    <h3>Average Salary of Breweries</h3>
     <div id="salaryGraph"></div>
   </center>
   <script src="./scripts/average_salary.js"></script>
