@@ -26,7 +26,7 @@
 
 <style>
 
-body, h1, h3, p {
+body, h1, h3, h4, h5, h6, p {
   margin: 10;
   padding: 1;
   font-family: 'Source Sans Pro', sans-serif;
@@ -56,10 +56,10 @@ h1 {
 }
 
 h2 {
-  margin: 0px 0px 0px 0px;
-  line-height: 0.75em;
+  margin: 10px 0px 0px 0px;
+  line-height: 1.2em;
   font-size: 1.2em;
-  font-weight: 900;
+  font-weight: 600;
   color: #000;
 }
 
@@ -69,6 +69,13 @@ h3 {
   font-size: 1.2em;
   font-weight: 900;
   color: #000;
+}
+
+h6 {
+  margin: 0px 0px 0px 0px;
+  line-height: 1em;
+  font-size: 1em;
+  font-style: italic;
 }
 
 table, th, td {
@@ -88,6 +95,7 @@ h2.year {
 p {
   margin: 10px 0px 0px 0px;
 }
+
 
 .county {
   fill: none;
@@ -225,17 +233,18 @@ path {
 
 <div id="content">
   <center>
-    <h1><font size="20">Migration of Breweries Across the United States</font></h1>
-    <h1><font size="5">11.154 Final Project by:</font></h1>
-    <h1><font size="5">Bret Stepanek and Jackson Lubin</font></h1>
+    <h1><font size="20">Migration of Breweries Across America:</font></h1>
+    <h1 style="margin-bottom:3cm;"><font size="6">Why are microbreweries stealing so much market share?</font></h1>
+    <h2>11.154 Final Project by:</h1>
+    <h2 style="margin-bottom:3cm;">Bret Stepanek and Jackson Lubin</h1>
   </center>
-  <p>
-    We would like to introduce you to a data-based analysis of the craft beer explosion revolutionizing the American beer market. We will define craft beer as any beer produced in a brewery that makes less than six million barrels. In America recently, the amount of beer overall sold each year has decreased 7% over the last 10 years, while the amount of beer sold from microbreweries (less than 30,000 barrels/year) has increased by 271% in the same timeframe.
-  </p><p>
-    Based on US Census data, the number of people emplyed in a brewery in America has doubled between 2007 and 2016 (the most recently published year), which is far higher growth than the rest of the economy. 
-
-  <center>
-    </p>
+ 	<p>
+		We would like to introduce you to a data-based analysis of the craft beer explosion revolutionizing the American beer market. We are interested in the craft beer market dynamics because of extreme migration of sales from large market leaders to local microbreweries. We define craft breweries as any brewery that produces less than six million barrels of beer each year, which is enough for 6,000 bars’ worth per year.
+	</p>
+	<h6>
+    	Based on US Census data, the number of people emplyed in a brewery in America has doubled between 2007 and 2016 (the most recently published year), which is far higher growth than the rest of the economy.
+    </h6>
+    <center>
       <table>
         <tr>
           <th align="right">31 Gallons</th> <th>=</th> <th align="left">1 Barrel</th>
@@ -254,6 +263,13 @@ path {
   </p>
 
   <center>
+    <h1>Beer Production by Size of Brewery</h1>
+    <div id="productionStacked"></div>
+    <h6>Breweries are grouped by size (determined by how many barrels per year they produce).</h6>
+  </center>
+  <script src="./scripts/production_stacked_bar.js"></script>
+
+  <center>
     <h1>Number of Breweries</h1>
     <div id="numberStacked"></div>
   </center>
@@ -263,11 +279,6 @@ path {
     More text
   </p>
 
-  <center>
-    <h1>Beer Production by Size of Brewery</h1>
-    <div id="productionStacked"></div>
-  </center>
-  <script src="./scripts/production_stacked_bar.js"></script>
   
   <p>
     More text

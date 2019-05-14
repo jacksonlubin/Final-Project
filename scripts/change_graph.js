@@ -59,7 +59,7 @@ d3v4.tsv("./data/changeData.tsv", function(error, data) {
       .enter().append("g")
         .attr("transform", d => "translate(" + x0Change(d.year) + ",0)" )
       selection.selectAll("rect")
-      //Use map function with the subCategories array and the Econ2 array
+      //Use map function with the subCategories array
        .data(function(d) { return subCategories.map(function(key) { return {key: key, value: d[key]}; }); })
         .enter().append("rect")
         .attr("x", d => x1Change(d.key) )
