@@ -263,12 +263,13 @@ path {
 <div id="leftHalf"></div>
 <div id="rightHalf"></div>
 <div id="content">
-  <section style="background-image: url(./images/center.png)">
+  <section style="background-image: url(./images/center.png);text-shadow: 0px 0px 5px #000000;">
+    <a name="top"></a>
     <center>
-      <h1 style="margin-top:2in;">Migration of Breweries Across America:</h1>
-      <h1 style="margin-bottom:2in;"><font size="6.5">Why are microbreweries stealing so much market share?</font></h1>
-      <h2>11.154 Final Project by:</h2>
-      <h2 style="margin-bottom:4in;">Bret Stepanek and Jackson Lubin</h2>
+      <h1 style="margin-top:2in; color: #ffffff">Migration of Breweries Across America:</h1>
+      <h1 style="margin-bottom:2in; color: #ffffff"><font size="6.8">Why are Microbreweries Stealing so Much Market Share?</font></h1>
+      <h2 style="color: #ffffff">11.154 Final Project by:</h2>
+      <h2 style="color: #ffffff">Bret Stepanek and Jackson Lubin</h2>
     </center>
   </section>
 
@@ -353,20 +354,20 @@ path {
  <section>
     <h4>
     Why is this trend happening? There are two main causes: <br> <br> </h4>
-    <h4>
-    1. Consumer choice trends </h4> 
+    <h4 style="margin-left: 0">1. Consumer choice trends </h4> 
 
     <p>
-    Adults in America today generally believe that the biggest, national breweries do not have high quality finished products, and so they want beer from local breweries. According to a poll by the Brewer’s Association, an industry group for craft and independent breweries, 67% of beer drinkers said that it was important to them that the beer they drank came from a local brewery [1]. In general, the closer to home the brewery is, the more local residents want to drink from it. 
+      <a name="src1"></a>
+      Adults in America today generally believe that the biggest, national breweries do not have high quality finished products, and so they want beer from local breweries. According to a poll by the Brewer’s Association, an industry group for craft and independent breweries, 67% of beer drinkers said that it was important to them that the beer they drank came from a local brewery [<a href="#sources">1</a>]. In general, the closer to home the brewery is, the more local residents want to drink from it. 
     </p> 
     <br>
-    <h4>
-    2. Brewery friendly government policies
-    </h4>
+    <h4 style="margin-left: 0">2. Brewery friendly government policies</h4>
     <p>
-    <b>The second reason for a craft brewery explosion in recent years: government policies friendly to small breweries. </b> <br>At the end of the Prohibition Era in 1933, the federal government heavily restricted the beer industry. With a <b>“Three-Tier System,” </b>they required that brewers could not distribute the beer themselves and then the distributors had to use retailers to sell the final product to consumers [2]. This was aimed to decrease vertical monopolies and cause deliberate inefficiencies in the market to help competition, and it worked. This system means that the breweries themselves often do not know where their beer is even being sold because distributors buy the beer outright from the breweries and sell to retailers in closely guarded trade routes. This was a limitation to our data collection and meant that our only information on individual breweries came from the Cambridge Brewing Company, where the only details the owner knew himself was that his beer was sold in Massachusetts and Rhode Island. 
+    <b>
+      <a name="src2"></a>
+      The second reason for a craft brewery explosion in recent years: government policies friendly to small breweries. </b> <br>At the end of the Prohibition Era in 1933, the federal government heavily restricted the beer industry. With a <b>“Three-Tier System,” </b>they required that brewers could not distribute the beer themselves and then the distributors had to use retailers to sell the final product to consumers [<a href="#sources">2</a>]. This was aimed to decrease vertical monopolies and cause deliberate inefficiencies in the market to help competition, and it worked. This system means that the breweries themselves often do not know where their beer is even being sold because distributors buy the beer outright from the breweries and sell to retailers in closely guarded trade routes. This was a limitation to our data collection and meant that our only information on individual breweries came from the Cambridge Brewing Company, where the only details the owner knew himself was that his beer was sold in Massachusetts and Rhode Island. 
     </p><p>
-    The flip side to our lack of individual brewery data is that this system means that small startup microbreweries are allowed to sell to the same stores and in the same market as their much larger rivals, allowing easy access to a massive market. 
+      The flip side to our lack of individual brewery data is that this system means that small startup microbreweries are allowed to sell to the same stores and in the same market as their much larger rivals, allowing easy access to a massive market. 
     </p>
     <br>
     <br>
@@ -384,7 +385,8 @@ path {
     <script src="./scripts/mapTimeline.js"></script>
     <h4>So why didn’t more breweries start in 1933?</h4>
     <p>
-        In 1978, congress passed a bill that legalized brewing beer at home without taxation, which caused the 1980’s to see a mini-explosion of craft beer similar to what we’re seeing today [3]. In 1984 we see the first year of double digit breweries opening up, which continues to today. Today we might have heard of Sierra Nevada, Sam Adams, or the mch smaller Cambridge Brewing Company, all of which were founded in the 1980’s during this first microbrewery surge. 
+        <a name="src3"></a>
+        In 1978, congress passed a bill that legalized brewing beer at home without taxation, which caused the 1980’s to see a mini-explosion of craft beer similar to what we’re seeing today [<a href="#sources">3</a>]. In 1984 we see the first year of double digit breweries opening up, which continues to today. Today we might have heard of Sierra Nevada, Sam Adams, or the mch smaller Cambridge Brewing Company, all of which were founded in the 1980’s during this first microbrewery surge. 
     </p>
     <p>
     <b>
@@ -434,7 +436,7 @@ path {
 
   <section>
     <center><h1>Sources</h1></center>
-
+    <a name="sources"></a>
     <p>
       Visualizations were built using Mike Bostock's d3 library and were inspired specifically by the following projects:<br>
       <li> Doug Dowson's <a href="http://bl.ocks.org/dougdowson/9832019">Choropleth</a> </li>
@@ -449,6 +451,15 @@ path {
       <li><strong>Dun & Bradstreet:</strong> This data was used to create the timeline map. Similar to the Brewers Association data, this data provided us with a zip code for each brewery which was then run through a similar python script to get latitude and longitude coordinates. This was combined with the original data set and cleaned to produce a data set containing brewery name, year founded, latitude and longitude. This was then used to create the timeline map. </li>
       <li><strong>U.S. Census Data:</strong> This data was used to create the stacked and grouped bar charts. The census data was cleaned by combining all spreadsheets (one for each year) into a single sheet and running a python script to convert to a properly formatted csv file. </li>
     </p>  
+
+    <p>
+      Other sources:<br>
+      <li>[<a href="https://www.washingtonpost.com/lifestyle/food/america-now-has-more-breweries-than-ever-and-that-might-be-a-problem/2016/01/15/d23e3800-b998-11e5-99f3-184bc379b12d_story.html?utm_term=.5ef2b2910d50">1</a>] America now has more breweries than ever. And that might be a problem., <a href="#src2">Back to Section</a></li>
+      <li>[<a href="https://www.theatlantic.com/business/archive/2018/01/craft-beer-industry/550850/">2</a>] Craft Beer Is the Strangest, Happiest Economic Story in America, <a href="#src2">Back to Section</a></li>
+      <li>[<a href="https://beerandbrewing.com/the-day-homebrewing-was-legalized/">3</a>] The Day Homebrewing Was Legalized, <a href="#src3">Back to Section</a></li>
+      <br>
+    </p>
+    <a href="#top">Back to Top</a>
   </section>
 </div>
 </body>
