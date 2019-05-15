@@ -28,13 +28,27 @@
 
 body, h1, h3, h4, h5, h6, p {
   margin: 10;
-  padding: 1;
+  padding: 10;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.1em;
   color: #333;
   font-weight: 400;
 }
 
+#leftHalf {
+   background: url("./images/left.png");
+   width: 199px;
+   position: absolute;
+   left: 9px;
+   height: 100vh;
+}
+#rightHalf {
+   background: url("./images/right.png");
+   width: 198px;
+   position: absolute;
+   right: 9px;
+   height: 100vh;
+}
 
 #content {
   /*margin: 300px 200px 10px 200px;*/
@@ -246,8 +260,10 @@ path {
 
 <body>
 
+<div id="leftHalf"></div>
+<div id="rightHalf"></div>
 <div id="content">
-  <section>
+  <section style="background-image: url(./images/center.png)">
     <center>
       <h1 style="margin-top:2in;">Migration of Breweries Across America:</h1>
       <h1 style="margin-bottom:2in;"><font size="6.5">Why are microbreweries stealing so much market share?</font></h1>
