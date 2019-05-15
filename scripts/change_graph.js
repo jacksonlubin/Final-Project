@@ -46,7 +46,9 @@ d3v4.tsv("./data/changeData.tsv", function(error, data) {
   //examine first object, retrieve the keys, and discard the first key
   //return resulting array of keys
   var subCategories = Object.keys(data[0]).slice(1);
-  var legendTextChange = Object.keys(data[0]).slice(1).reverse();
+  // var legendTextChange = Object.keys(data[0]).slice(1).reverse();
+var legendTextChange = ["Micro", "Medium", "Regional", "National"]
+
 
   //use new array from just the year values for the bottom x-axis
   x0Change.domain(data.map( d =>  d.year ));
